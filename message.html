@@ -1,0 +1,196 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+*{
+	margin:0;
+	padding:0;
+}
+nav { 
+    text-align: center;
+    background: #4b545f;
+	width:100%;
+}
+ 
+nav ul ul {
+    display: none;
+}
+ 
+    nav ul li:hover > ul {
+        display: block;
+    }
+ 
+ 
+nav ul {
+    background: #4b545f;
+    box-shadow: 0px 0px 9px rgba(0,0,0,0.15);
+    padding: 0 20px;
+    border-radius: 10px;  
+    list-style: none;
+    position: relative;
+    display: inline-table;
+	
+}
+    nav ul:after {
+        content: ""; clear: both; display: block;
+    }
+ 
+    nav ul li {
+        float: left;
+    }
+        nav ul li:hover {
+            background: #4b545f;
+            background: linear-gradient(top, #4f5964 0%, #5f6975 40%);
+            background: -moz-linear-gradient(top, #4f5964 0%, #5f6975 40%);
+            background: -webkit-linear-gradient(top, #4f5964 0%,#5f6975 40%);
+        }
+            nav ul li:hover a {
+                color: #fff;
+            }
+         
+        nav ul li a {
+            display: block; padding: 25px 40px;
+            color:#FFF; text-decoration: none;
+        }
+             
+         
+    nav ul ul {
+        background: #5f6975; border-radius: 0px; padding: 0;
+        position: absolute; top: 100%;
+    }
+        nav ul ul li {
+            float: none; 
+            border-top: 1px solid #6b727c;
+            border-bottom: 1px solid #575f6a; position: relative;
+        }
+            nav ul ul li a {
+                padding: 15px 40px;
+                color: #fff;
+            }   
+                nav ul ul li a:hover {
+                    background: #4b545f;
+                }
+#div1{
+	text-align:center;
+	width:80%;
+	margin-right:auto;
+	margin-left:auto;
+	position:relative;
+
+}
+body{
+	background:url(image/god-picture/5.jpg);
+	background-position: center;
+
+background-repeat: no-repeat;
+
+background-attachment: fixed;
+
+	}
+#div2{
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:100px;
+	background:url(image/index/about-bg.jpg);
+	background-repeat:no-repeat;
+	width:1000px;
+	height:584px;
+	opacity:0.8;
+	position:relative;
+}
+#div2 div{
+	float:left;
+}
+#btn1{
+	position: absolute; left: 415px; top: 505px; width: 130px; height: 40px; font-size:18px; border-radius:10px;background: #F93;
+	border:#FC6 1px solid;
+}
+#btn1:hover{
+	background:#F60;
+}
+
+</style> 
+<script>
+window.onload=function(){
+	var oUl=document.getElementById('ul1');
+	var oTxt=document.getElementById('txt1');
+	var oBtn=document.getElementById('btn1');
+	oBtn.onclick=function(){
+		var oP=document.createElement('p');
+		var oLi=document.createElement('li');
+		var aLi=oUl.getElementsByTagName('li');
+		var aP=oUl.getElementsByTagName('p');
+		oP.innerHTML="某仁兄说:<br>"
+		oLi.innerHTML=oTxt.value;
+		oUl.insertBefore(oLi,aP[0]);
+		oUl.insertBefore(oP,aLi[0]);
+	};
+	function zifu(n)
+	{
+		if(n<10)
+		return '0'+n;
+		else
+		return ''+n;
+	}
+	function show(){
+		var oDate=new Date();
+	var oImg=document.getElementsByTagName("img");
+	var str=zifu(oDate.getHours())+zifu(oDate.getMinutes())+zifu(oDate.getSeconds());
+	for(var i=0;i<oImg.length;i++)
+	{
+		oImg[i].src='number image/images/nunber ('+str.charAt(i)+').gif';
+	} 
+	}
+	setInterval(show,1000);
+	show();
+
+};
+</script>  
+</head>
+
+<body>
+<nav>
+    <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="#">战神专题</a>
+            <ul>
+                <li><a href="god-jieshao.html">故事介绍</a>
+                </li>
+                <li><a href="god-man.html">宣传视频</a>
+                </li>
+                <li><a href="god-picture.html">图片欣赏</a>
+                </li>
+            </ul>
+        </li>
+        <li><a href="about-us.html">关于我们</a></li>
+        <li><a href="message.html">留言板</a></li>
+    </ul>
+</nav>
+<div id="div1">
+  <div id="div2">
+    <h1 style="position: absolute; display: block; font-size: 36px; width: 40px; left: 29px; top: 171px; line-height:50px;">留言板</h1>
+    <textarea id="txt1" style="position: absolute; left: 99px; top: 52px; height: 430px; width: 350px; border-radius:10px; font-size:18px;">  请输入你想说的话：</textarea>
+    
+    
+     <div style=" border-radius:10px; width:350px; height:430px; overflow:scroll; background:#FFF; position:relative; left:500px; top:53px;font-size:15px;">
+      <ul id="ul1" style="display:block; text-align:left; list-style:disc;"></ul>
+    </div>
+    <input id="btn1" type="button" value="你不点一下吗"/>
+    
+    <h1 style="position: absolute; display: block; font-size: 36px; width: 40px; left: 919px; top: 162px; line-height: 50px;">留言录</h1>
+  </div>
+  <div style="margin-top:20px; opacity:0.7;">
+  <img src="number image/images/nunber (0).gif" width="127" height="152">
+<img src="number image/images/nunber (0).gif" width="127" height="152"> &nbsp;<a>:</a>&nbsp;
+<img src="number image/images/nunber (0).gif" width="127" height="152">
+<img src="number image/images/nunber (0).gif" width="127" height="152">
+&nbsp;<a>:</a>&nbsp;
+<img src="number image/images/nunber (0).gif" width="127" height="152">
+<img src="number image/images/nunber (0).gif" width="127" height="152">
+  </div>
+</div>
+</body>
+</html>
+

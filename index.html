@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+*{
+	margin:0;
+	padding:0;
+}
+nav { 
+    text-align: center;
+    background: #4b545f;
+	width:100%;
+}
+ 
+nav ul ul {
+    display: none;
+}
+ 
+    nav ul li:hover > ul {
+        display: block;
+    }
+ 
+ 
+nav ul {
+    background: #4b545f;
+    box-shadow: 0px 0px 9px rgba(0,0,0,0.15);
+    padding: 0 20px;
+    border-radius: 10px;  
+    list-style: none;
+    position: relative;
+    display: inline-table;
+	
+}
+    nav ul:after {
+        content: ""; clear: both; display: block;
+    }
+ 
+    nav ul li {
+        float: left;
+    }
+        nav ul li:hover {
+            background: #4b545f;
+            background: linear-gradient(top, #4f5964 0%, #5f6975 40%);
+            background: -moz-linear-gradient(top, #4f5964 0%, #5f6975 40%);
+            background: -webkit-linear-gradient(top, #4f5964 0%,#5f6975 40%);
+        }
+            nav ul li:hover a {
+                color: #fff;
+            }
+         
+        nav ul li a {
+            display: block; padding: 25px 40px;
+            color:#FFF; text-decoration: none;
+        }
+             
+         
+    nav ul ul {
+        background: #5f6975; border-radius: 0px; padding: 0;
+        position: absolute; top: 100%;
+    }
+        nav ul ul li {
+            float: none; 
+            border-top: 1px solid #6b727c;
+            border-bottom: 1px solid #575f6a; position: relative;
+        }
+            nav ul ul li a {
+                padding: 15px 40px;
+                color: #fff;
+            }   
+                nav ul ul li a:hover {
+                    background: #4b545f;
+                }
+#div1{
+	text-align:center;
+	width:80%;
+	margin-right:auto;
+	margin-left:auto;
+
+}
+body{
+	background:url(image/index/god-bg.jpeg);
+	background-position: center;
+
+background-repeat: no-repeat;
+
+background-attachment: fixed;
+
+	}
+h1{
+	display:block;
+	width:80px;
+	font-size:80px;
+	float:right;
+	margin-top:250px;
+}
+#div1 div{
+	width:50%;
+	float:left;
+}
+p{
+	display:block;
+	width:35px;
+	font-size:35px;
+	float:right;
+	margin-right:50px;
+	margin-top:200px;
+}
+</style>    
+</head>
+
+<body>
+<nav>
+    <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="#">战神专题</a>
+            <ul>
+                <li><a href="god-jieshao.html">故事介绍</a>
+                </li>
+                <li><a href="god-man.html">宣传视频</a>
+                </li>
+                <li><a href="god-picture.html">图片欣赏</a>
+                </li>
+            </ul>
+        </li>
+        <li><a href="about-us.html">关于我们</a></li>
+        <li><a href="message.html">留言板</a></li>
+    </ul>
+</nav>
+<div id="div1">
+<div>
+<h1>游戏艺术</h1>
+<p>兼具绘画与音乐之美</p>
+<p>比电影更加身临其境</p>
+<p>有一种艺术叫做游戏</p>
+</div>
+</div>
+</body>
+</html>

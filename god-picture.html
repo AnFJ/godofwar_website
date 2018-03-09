@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+*{margin:0; padding:0;}
+#div1{
+	display:block;
+	position:relative;/*通过该变div1的位置实现里面的内容的该变*/
+	width:1920px;
+	height:1080px;
+	margin-right:auto;
+	margin-left:auto;
+	background-image:url(images/8769474468a572ca77f7e74f67922c6f.jpg);
+	overflow:hidden;
+}
+#div1 ul{
+	position:absolute;
+	top:0;
+	left:0;
+}
+#div1 ul li{
+	float:left;
+	list-style:none;
+}
+div{
+	opacity:0.4;
+	position:absolute;
+	z-index:1;
+	top:-25px;
+	width:50px;
+	height:30px;
+	background:url(image/index/tiao.jpg);
+	background-position:center;
+	background-repeat:repeat-y;
+	float:left;
+	margin:5px;
+}
+</style>
+<script>
+window.onload=function(){
+   var oDiv1=document.getElementById('div1');
+   var oUl=document.getElementsByTagName('ul');
+   var oLi=document.getElementsByTagName('li');
+   oUl[0].innerHTML=oUl[0].innerHTML+oUl[0].innerHTML;
+   oUl[0].style.width=oLi[0].offsetWidth*oLi.length+'px';
+   setInterval(function(){
+	   if(oUl[0].offsetLeft<-oUl[0].offsetWidth/2)
+	   oUl[0].style.left=0;
+	   else
+	   {
+		   oUl[0].style.left=oUl[0].offsetLeft-4+'px';
+	   }
+   },30);
+   
+   
+   var oDiv=document.getElementsByTagName('div');
+	for(var i=0;i<oDiv.length;i++)
+	{
+		
+		oDiv[i].time=null;
+		oDiv[i].onmouseover=function(){getHeight(this,1000);};
+		oDiv[i].onmouseout=function(){getHeight(this,30);};
+		
+	}
+	function getHeight(obj,target){
+		clearInterval(obj.time);
+		obj.time=setInterval(function(){
+		var speed;
+		speed=(target-obj.offsetHeight)/3;
+		if(obj.offsetHeight==target)
+		clearInterval(obj.time);
+		else
+		obj.style.height=obj.offsetHeight+speed+'px';
+		},30);
+	}
+};
+</script>
+</head>
+<div style="left:0px"></div>
+<div style="left:50px"></div>
+<div style="left:100px"></div>
+<div style="left:150px"></div>
+<div style="left:200px"></div>
+<div style="left:250px"></div>
+<div style="left:300px"></div>
+<div style="left:350px"></div>
+<div style="left:400px"></div>
+<div style="left:450px"></div>
+<div style="left:500px"></div>
+<div style="left:550px"></div>
+<div style="left:600px"></div>
+<div style="left:650px"></div>
+<div style="left:700px"></div>
+<div style="left:750px"></div>
+<div style="left:800px"></div>
+<div style="left:850px"></div>
+<div style="left:900px"></div>
+<div style="left:950px"></div>
+<div style="left:1000px"></div>
+<div style="left:1050px"></div>
+<div style="left:1100px"></div>
+<div style="left:1150px"></div>
+<div style="left:1200px"></div>
+<div style="left:1250px"></div>
+<div style="left:1300px"></div>
+<div style="left:1350px"></div>
+<div style="left:1400px"></div>
+<div style="left:1450px"></div>
+<div style="left:1500px"></div>
+<div style="left:1550px"></div>
+<div style="left:1600px"></div>
+<div style="left:1650px"></div>
+<div style="left:1700px"></div>
+<div style="left:1750px"></div>
+<div style="left:1800px"></div>
+<div style="left:1850px"></div>
+
+<body>
+
+<ul id="div1">
+   <ul>
+      <li><img src="image/god-picture/1.jpg" width="1920" height="1080"></li>
+      <li><img src="image/god-picture/2.jpg" width="1920" height="1080"></li>
+      <li><img src="image/god-picture/3.jpg" width="1920" height="1080"></li>
+      <li><img src="image/god-picture/4.jpg" width="1920" height="1080"></li>
+      <li><img src="image/god-picture/5.jpg" width="1920" height="1080"></li>
+      <li><img src="image/god-picture/6.jpg" width="1920" height="1080"></li>
+    </ul>  
+</div>
+</body>
+</html>
+
